@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>padding_not_change_box</title>
+    <style>
+      div {
+        height: 41px;
+        line-height: 41px;
+        border-top: 3px solid yellow;
+        border-bottom: 1px solid black;
+      }
+      /* if you do not set display as inline-block,
+         the padding setting will not be displayed 
+         because of padding will not effect when this element does not have size. */
+      a {
+        display: inline-block;
+        height: 41px;
+        padding: 0px 80px;
+        /* font */
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+      }
+      a:hover {
+        color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a href="#">different_length</a>
+      <a href="#">item1</a>
+      <a href="#">long_story2</a>
+      <a href="#">s</a>
+      <a href="#">different_length2</a>
+    </div>
+  </body>
+</html>

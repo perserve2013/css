@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>padding_change_box_example2</title>
+    <style>
+      div {
+        height: 250px;
+        width: 160px;
+        background-color: grey;
+      }
+      a {
+        display: block;
+        height: 50px;
+        /* keep text in the middle in the vertical direction */
+        line-height: 50px;
+        /* we use padding-left to control indentation of text, 
+           we don't use text-indent to control indentation of text 
+           because we need use px as unit to control indentation.*/
+        padding-left: 50px;
+
+        text-decoration: none;
+        color: red;
+        font-size: 20px;
+      }
+      a:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a href="#">link1</a>
+      <a href="#">link2</a>
+      <a href="#">link3</a>
+      <a href="#">link4</a>
+      <a href="#">link5</a>
+    </div>
+  </body>
+</html>

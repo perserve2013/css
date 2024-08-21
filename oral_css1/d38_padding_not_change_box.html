@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>compounded_selector_priority_exercise</title>
+    <style>
+      #nav {
+        /* if you do not set width, box size is (41+20+20)px*(1684)px */
+        /* if you set width,        box size is (41+20+20)px*(1684+20+20)px */
+        /* width: 100%; */
+        height: 41px;
+        padding: 20px;
+        background-color: red;
+      }
+      #nav2 {
+        height: 81px;
+        width: 300px;
+        background-color: green;
+      }
+      #nav2 p {
+        padding: 10px;
+        /* if you do not set width, p width is 300px,  means: padding not effect */
+        /* if you set width,        p width is 320px,  means: padding effect */
+        /* width: 100%; */
+
+        /* if you do not set content in p label, p height is 0px,  means: padding  not effect */
+        /* if you set content in p label, p height is (21.25+10+10)px,  means: padding   effect */
+        /* 21.25px is a default font-size */
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav"></div>
+    <div id="nav2">
+      <p>this is a child</p>
+    </div>
+  </body>
+</html>

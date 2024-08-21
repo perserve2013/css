@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>all_kinds_of_selector</title>
+    <style>
+      #nav ul li {
+        color: pink;
+      }
+      ol > .li2 {
+        color: red;
+      }
+      .li3,
+      ol > .li4 {
+        color: aqua;
+      }
+      /* love hate */
+      /* have not clicked the a label */
+      a:link {
+        color: pink;
+      }
+      /* have clicked the a label */
+      a:visited {
+        color: red;
+      }
+      /* mouse move to the a label */
+      a:hover {
+        color: aqua;
+      }
+      /* have clicked down the a label but have not clicked up */
+      a:active {
+        color: gold;
+      }
+
+      #normal_a {
+        color: black;
+        text-decoration: none;
+      }
+      #normal_a:hover {
+        color: red;
+      }
+      input:focus {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      <ul>
+        <li>progeny-selector</li>
+      </ul>
+      <ol>
+        <li class="li2">son-selector</li>
+        <li class="li3">union-selector1</li>
+        <li class="li4">union-selector2</li>
+        <li><a href="#">link_pseudo-class-selector</a></li>
+      </ol>
+      <a id="normal_a" href="#">normal-a-label</a><br />
+      <input type="text" value="focus-pseudo-class-selector" />
+    </div>
+  </body>
+</html>

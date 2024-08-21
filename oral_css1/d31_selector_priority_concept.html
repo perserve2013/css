@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>compounded_selector_priority</title>
+    <style>
+      #nav {
+        color: pink;
+      }
+      li {
+        color: red;
+      }
+      .li-class {
+        color: green;
+      }
+      #li-id {
+        color: yellow;
+      }
+      .li-class2 {
+        color: aqua !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      <p>inherit from div</p>
+      <ul>
+        <li>element-selector is bigger than inheriting</li>
+        <li class="li-class">class-selector is bigger than element-selector</li>
+        <li id="li-id">id-selector is bigger than class-selector</li>
+        <li style="color: black">inline-style is bigger than id-selector</li>
+        <li class="li-class2" style="color: black">
+          !important is bigger than inline-style
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>padding_change_box</title>
+    <style>
+      /* oral box is 100px*300px,
+         but "padding" makes the box bigger,
+         turn out to be:   (100+20+20)px*(300+20+20)px
+                            140px*340px */
+      .div1 {
+        height: 100px;
+        width: 300px;
+        padding: 20px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1"></div>
+  </body>
+</html>

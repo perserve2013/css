@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>compounded_selector_priority_exercise</title>
+    <style>
+      /* priority is 100+1 */
+      #nav p {
+        color: pink;
+      }
+      /* priority is 10 */
+      .p-class {
+        /* red is overloaded by pink because of the priority:10<101   */
+        color: red;
+        font-size: xx-large;
+      }
+
+      /* priority is 10+1 */
+      .nav2 p {
+        color: pink;
+      }
+      /* priority is 100 */
+      #p-id {
+        /* pink is overloaded by red because of the priority:100>11   */
+        color: red;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      <p class="p-class">red is overloaded by pink</p>
+    </div>
+
+    <div class="nav2">
+      <p id="p-id">pink is overloaded by red</p>
+    </div>
+  </body>
+</html>

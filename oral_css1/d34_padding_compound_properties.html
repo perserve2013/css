@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>padding_compound_properties</title>
+    <style>
+      /* when there is 1 value in padding, 
+         it means top padding，right padding，bottom padding，left padding are all 20px,
+         box size turned into 140px*340px */
+      .div1 {
+        width: 300px;
+        height: 100px;
+        padding: 20px;
+        background-color: pink;
+      }
+      /* when there are 2 value in padding, 
+         it means top padding，bottom padding are 20px,
+                  right padding, left padding are 10px; 
+         box size turned into 140px*320px */
+      .div2 {
+        height: 100px;
+        width: 300px;
+        padding: 20px 10px;
+        background-color: red;
+      }
+      /* when there are 3 value in padding, 
+         it means top padding is 20px,
+                  right padding, left padding are 10px,
+                  bottom padding is 30px;
+         box size turned into 150px*320px */
+      .div3 {
+        height: 100px;
+        width: 300px;
+        padding: 20px 10px 30px;
+        background-color: green;
+      }
+      /* when there are 4 value in padding, 
+         it means top padding is 20px,
+                  right padding is 10px,
+                  bottom padding is 30px,
+                  left padding is 40px;==>anti clock wise
+         box size turned into 150px*350px */
+      .div4 {
+        height: 100px;
+        width: 300px;
+        padding: 20px 10px 30px 40px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+  </body>
+</html>

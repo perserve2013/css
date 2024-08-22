@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>margin_display_block_center</title>
+    <style>
+      #nav {
+        /* if you want a block-display element in the center of the line,
+             you need to :1.set this element's width
+                          2 set it to margin:0px auto */
+
+        width: 200px;
+        background-color: red;
+        margin: 0px auto;
+        /* you can auto set margin to make it in center      like below: */
+        /* margin: auto; */
+        /* margin-left: auto;
+        margin-right: auto; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">i have width, but i do not have height</div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>margin_compounded_preperties</title>
+    <style>
+      #nav1 {
+        margin-bottom: 20px;
+      }
+      #nav1,
+      #nav2,
+      #nav3,
+      #nav4,
+      #nav5,
+      #nav6,
+      #nav7,
+      #nav8,
+      #nav9,
+      #nav10,
+      #nav11,
+      #nav12 {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+      }
+      #nav4 {
+        margin-top: 20px;
+      }
+      #nav6 {
+        /* top right bottom left 
+           4 direction's margin are all 20px */
+        margin: 20px;
+      }
+      #nav8 {
+        /* top   bottom   direction's margin are   20px  
+           right left     direction's margin are   40px */
+        margin: 20px 40px;
+      }
+      #nav10 {
+        /* top           direction's margin are   20px  
+           right left     direction's margin are   40px 
+           bottom        direction's margin are   50px  */
+        margin: 20px 40px 50px;
+      }
+      #nav12 {
+        /* top           direction's margin are   20px  
+           right       direction's margin are   40px 
+           bottom        direction's margin are   50px   
+           left      direction's margin are   60px */
+        margin: 20px 40px 50px 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav1"></div>
+    <div id="nav2"></div>
+    -------------------------------------------------------------
+    <div id="nav3"></div>
+    <div id="nav4"></div>
+    -------------------------------------------------------------
+    <div id="nav5"></div>
+    <div id="nav6"></div>
+    -------------------------------------------------------------
+    <div id="nav7"></div>
+    <div id="nav8"></div>
+    -------------------------------------------------------------
+    <div id="nav9"></div>
+    <div id="nav10"></div>
+    -------------------------------------------------------------
+    <div id="nav11"></div>
+    <div id="nav12"></div>
+    -------------------------------------------------------------
+  </body>
+</html>

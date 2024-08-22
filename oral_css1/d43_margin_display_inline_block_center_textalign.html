@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>margin_display_inline_block_center_textalign</title>
+    <style>
+      #nav1 {
+        /* if you want your inline-display in the center of the line, 
+        you need to set its father whick is block-element to text-align:center.
+           span label is a inline-display element! */
+        width: 800px;
+        background-color: red;
+        text-align: center;
+      }
+      #nav2 {
+        /* if you want your inline-block-display in the center of the line, 
+        you need to set its father whick is block-element to text-align:center .
+           img label is a inline-block-display element! */
+        width: 800px;
+        background-color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav1"><span>i am a inline-display element</span></div>
+    <div id="nav2">
+      <img src="down.jpg" />
+    </div>
+  </body>
+</html>

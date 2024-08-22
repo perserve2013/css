@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>example_img_p_div_h4_span_class</title>
+    <style>
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .nav {
+        height: 500px;
+        width: 350px;
+        background-color: white;
+        /* in the center from the horitonal direction */
+        margin: 100px auto;
+      }
+      body {
+        background-color: aqua;
+      }
+      .nav img {
+        /* make img not beyond his father
+           make img'width equal to his father's width */
+        width: 100%;
+      }
+      .nav .remark {
+        height: 70px;
+        /* because this element has height, we do not use padding-top and padding-bottom  so that we do not need to calculate height again. */
+        margin-top: 20px;
+        /* because this element has no width, we  use padding-right and  padding-left.  we do not need to worry about calculating width.   */
+        padding: 0px 20px;
+      }
+      .nav .remark_from {
+        margin-top: 20px;
+        padding: 0px 20px;
+        font-size: 12px;
+      }
+      .info {
+        margin-top: 15px;
+        padding: 0px 20px;
+      }
+      .info h4 {
+        /* h4 is block-display element,  need to be changed to  inline-block   so than it can be exists on the same line with span label*/
+        display: inline-block;
+        font-weight: 400;
+      }
+      .info em {
+        font-style: normal;
+        /* use margin to  divide h4 and span */
+        margin: 0px 6px 0px 15px;
+      }
+      .info span {
+        color: brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <img src="images/img.jpg" />
+      <p class="remark">Express delivery is excellent</p>
+      <div class="remark_from">Evaluation from 117384232</div>
+      <div class="info">
+        <h4 class="product">Redmi AirDots真无线蓝...</h4>
+        <em>|</em>
+        <span class="price">99.9元</span>
+      </div>
+    </div>
+  </body>
+</html>

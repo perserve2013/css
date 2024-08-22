@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>margin_collapsing_of_nested_block_element</title>
+    <style>
+      #father {
+        height: 600px;
+        width: 800px;
+        background-color: red;
+        margin-top: 50px;
+      }
+      #son {
+        /* when two nested block meet, margin-top will be the bigger between two  margin-top values,
+           it seems like the father-element  collapse with the bigger value.
+        so: not only :the son-element does not margin-top 100px,
+            but also :the father-element's margin-top changes to 100px from 50px.*/
+        margin-top: 100px;
+        height: 200px;
+        width: 300px;
+        background-color: green;
+      }
+      /* how to fix, please see below: */
+      #father1 {
+        /* there are 3 methods to fix this problem:
+        1. give the father-element a border value   to divide itself from son1. 
+        */
+        border-top: 1px solid transparent;
+        height: 600px;
+        width: 800px;
+        background-color: red;
+        margin-top: 50px;
+      }
+      #son1 {
+        margin-top: 100px;
+        height: 200px;
+        width: 300px;
+        background-color: green;
+      }
+      #father2 {
+        /* there are 3 methods to fix this problem:
+        2. give the father-element a padding value   to divide itself from son2. 
+        */
+        padding-top: 50px;
+        height: 600px;
+        width: 800px;
+        background-color: red;
+        margin-top: 50px;
+      }
+      #son2 {
+        margin-top: 100px;
+        height: 200px;
+        width: 300px;
+        background-color: green;
+      }
+      #father3 {
+        /* there are 3 methods to fix this problem:
+        3. set the father-element's overflow as hidden  to divide itself from son3. 
+           this method is perfect, because it will not change the box's size.  
+        */
+        overflow: hidden;
+        height: 600px;
+        width: 800px;
+        background-color: red;
+        margin-top: 50px;
+      }
+      #son3 {
+        margin-top: 100px;
+        height: 200px;
+        width: 300px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="father">
+      <div id="son"></div>
+    </div>
+    ----------------------------------------
+    <div id="father1">
+      <div id="son1"></div>
+    </div>
+    ----------------------------------------
+    <div id="father2">
+      <div id="son2"></div>
+    </div>
+  </body>
+  ----------------------------------------
+  <div id="father3">
+    <div id="son3"></div>
+  </div>
+</body>
+</html>

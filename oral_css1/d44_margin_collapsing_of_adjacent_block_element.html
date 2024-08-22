@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>margin_collapsing_of_adjacent_block_element</title>
+    <style>
+      #nav1 {
+        height: 300px;
+        width: 800px;
+        background-color: red;
+        margin-bottom: 10px;
+      }
+      #nav2 {
+        /* when two adjacent block meet, margin will be the bigger between margin-bottom and margin-top,
+           it seems like the bigger one merged into the smaller one.
+        so: the gap between nav1 and nav2 is not 110px,
+                                         is 100px, because 100px > 10px. 100px merged 1px. */
+        margin-top: 100px;
+        height: 400px;
+        width: 900px;
+        background-color: green;
+      }
+      /* how to fix, please see below: */
+      #nav3 {
+        height: 300px;
+        width: 800px;
+        background-color: red;
+      }
+      #nav4 {
+        /* you can only set either of the element's margin to avoid the marge. */
+        margin-top: 110px;
+        height: 400px;
+        width: 900px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav1"></div>
+    <div id="nav2"></div>
+    ----------------------------------------
+    <div id="nav3"></div>
+    <div id="nav4"></div>
+  </body>
+</html>

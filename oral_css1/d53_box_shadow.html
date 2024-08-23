@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>box_shadow</title>
+    <style>
+      /* thought:
+      box-shadow: h-shadow  v-shadow  blur  spread  color  inset  
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .border1 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        box-shadow: 10px 10px 10px 10px black;
+      }
+      .border2 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* shadow move 10px toward right */
+        box-shadow: 20px 10px 10px 10px black;
+      }
+      .border3 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* shadow move 10px toward bottom */
+        box-shadow: 10px 20px 10px 10px black;
+      }
+      .border4 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* shadow turned more 10px-blurred  than before */
+        box-shadow: 10px 10px 20px 10px black;
+      }
+      .border5 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* shadow's area changed more 10px-bigger  than before */
+        box-shadow: 10px 10px 10px 20px black;
+      }
+      .border6 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* shadow's color changed from black to   this: 0,0,0 means black,  0.3 means transparency*/
+        box-shadow: 10px 10px 10px 10px rgb(0, 0, 0, 0.3);
+      }
+      .border7 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* if you do not write the 6th parameter, it means outset, the shadow is outside of the div
+           if you   write the 6th parameter as inset, it means inset, the shadow is inside of the div*/
+        box-shadow: 10px 10px 10px 10px black inset;
+      }
+      .border8 {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border8:hover {
+        /* when you hover div, the shadow appear*/
+        box-shadow: 10px -10px 10px 10px black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="border1"></div>
+    ---------------------
+    <div class="border2"></div>
+    ---------------------
+    <div class="border3"></div>
+    ---------------------
+    <div class="border4"></div>
+    ---------------------
+    <div class="border5"></div>
+    ---------------------
+    <div class="border6"></div>
+    ---------------------
+    <div class="border7"></div>
+    ---------------------
+    <div class="border8"></div>
+  </body>
+</html>

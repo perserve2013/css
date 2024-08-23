@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>border_radius</title>
+    <style>
+      /* thought:
+      border1: circle
+      border2: rectangle with circles on the left and right sides
+      border3: rectangle with rounded corner  
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .border1 {
+        height: 30px;
+        width: 30px;
+        background-color: pink;
+        /* border-radius: 15px; */
+        border-radius: 50%;
+      }
+      .border2 {
+        height: 30px;
+        width: 60px;
+        background-color: pink;
+        border-radius: 15px;
+      }
+      .border3 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        border-radius: 10px;
+      }
+      .border4 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        /* top-left,bottom-right:10px 
+           top-right,bottom-left:20px */
+        border-radius: 10px 20px;
+      }
+      .border5 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        /* top-left             :10px 
+           top-right,bottom-left:20px 
+           bottom-right         :30px*/
+        border-radius: 10px 20px 30px;
+      }
+      .border6 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        /* top-left             :10px 
+           top-right            :20px 
+           bottom-right         :30px
+           bottom-left          :40px*/
+        border-radius: 10px 20px 30px 40px;
+      }
+      .border7 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        /* top-left             :10px*/
+        border-top-left-radius: 10px;
+      }
+      .border8 {
+        height: 60px;
+        width: 100px;
+        background-color: pink;
+        /* top-right            :20px */
+        border-top-right-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="border1"></div>
+    ---------------------
+    <div class="border2"></div>
+    ---------------------
+    <div class="border3"></div>
+    ---------------------
+    <div class="border4"></div>
+    ---------------------
+    <div class="border5"></div>
+    ---------------------
+    <div class="border6"></div>
+    ---------------------
+    <div class="border7"></div>
+    ---------------------
+    <div class="border8"></div>
+    ---------------------
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_change_everything_into_inline_block</title>
+    <style>
+      /* thought:
+      float will change block into inline-block, for example--div:
+         1.(share a line)
+            many divs will be located on a same line   rather than occupy a line exclusively.
+         2.(reduce its width)
+            if a div has no width, its width will be its content's width    rather than browser's width
+            you can see standard_div occupy a line exclusively  because  it is in standard-flow  and not floated,
+                    but  border2  can only own its content's width because it is floated.  
+      float will change inline into inline-block, for example--span:
+         1.(own area)
+            span will own width and height
+       
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+
+      .standard_div {
+        height: 25px;
+        background-color: yellow;
+      }
+
+      .father1 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border1 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border2 {
+        float: left;
+        height: 90px;
+        background-color: red;
+      }
+
+      .father2 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border21 {
+        /* float: left; */
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+
+      .father3 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border31 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="standard_div"></div>
+    ----------------------
+    <div class="father1">
+      <div class="border1"></div>
+      <div class="border2">content's width</div>
+    </div>
+    ----------------------
+    <div class="father2">
+      <span class="border21">i am a span with no float</span>
+    </div>
+    ----------------------
+    <div class="father3">
+      <span class="border31">i am a span with float</span>
+    </div>
+  </body>
+</html>

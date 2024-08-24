@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_howto_clear_float4</title>
+    <style>
+      /* thought:
+      method3: 
+        add 2 pseudo-class for father-div:     .clear_float::after  .clear_float::before
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+
+      .clear_float {
+        *zoom: 1;
+      }
+      .clear_float::before,
+      .clear_float::after {
+        display: table;
+        content: "";
+      }
+      .clear_float::after {
+        clear: both;
+      }
+      .main {
+        width: 500px;
+        /* no height */
+        background-color: gray;
+      }
+      .main .flo {
+        float: left;
+        width: 10px;
+        height: 40px;
+        background-color: pink;
+      }
+      .below {
+        width: 200px;
+        height: 90px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main clear_float">
+      <div class="flo">1</div>
+      <div class="flo">2</div>
+      <div class="flo">3</div>
+      <div class="flo">4</div>
+    </div>
+    <div class="below">
+      add 2 pseudo-class for father-div: .clear_float::after
+      .clear_float::before
+    </div>
+  </body>
+</html>

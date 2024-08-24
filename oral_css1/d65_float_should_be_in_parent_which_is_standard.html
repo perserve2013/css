@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_should_be_in_parent_which_is_standard</title>
+    <style>
+      /* thought:
+      float should be a son-element    in a father-div which is in a standard-flow.
+      because a son-floated-element will not be beyond father-standard-element.
+
+      1. son-floated-element will not be beyond his father's area, 
+          so you will see:  border21 will not rise into the right of border2,
+                because border21 is located based on father2   not based on browser.
+                        border21 must be located in the top-left of father2-div.
+      2. all the son-floated-element  will be aligned at the top.
+          so you will see:  border1's top  and  border2's top  are on the horizontal line.
+      3. multiple son-floated-elements will be arranged horizontally.
+         when the arrangement exceeds  parent-standard-element's width, 
+         new son-floated-element will start on a new line.
+            so you will see:  border33 starts on a new line.
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+
+      .father1 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border1 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border2 {
+        float: left;
+        height: 90px;
+        width: 110px;
+        background-color: red;
+      }
+
+      .father2 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border21 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border22 {
+        float: left;
+        height: 90px;
+        width: 110px;
+        background-color: red;
+      }
+
+      .father3 {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+      }
+      .border31 {
+        float: left;
+        height: 30px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border32 {
+        float: left;
+        height: 40px;
+        width: 110px;
+        background-color: red;
+      }
+      .border33 {
+        float: left;
+        height: 30px;
+        width: 110px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="father1">
+      <div class="border1"></div>
+      <div class="border2"></div>
+    </div>
+    <div class="father2">
+      <div class="border21"></div>
+      <div class="border22"></div>
+    </div>
+    <div class="father3">
+      <div class="border31"></div>
+      <div class="border32"></div>
+      <div class="border33"></div>
+    </div>
+  </body>
+</html>

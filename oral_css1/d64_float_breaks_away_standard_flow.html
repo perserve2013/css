@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_breaks_away_standard_flow</title>
+    <style>
+      /* thought:
+      float will breaks away standard_flow,
+      element will levitate from original position:
+        1.it  will     effects subsequent-element  which is  in standard-flow. 
+            so that subsequent-normal-element will occupy this previous-floated-element's oraginal position.   
+        2.it  will not effects previous-elements   which is  in standard-flow. 
+            so that this subsequent-floated-element will be located at the previous-normal-element's lower edge
+                    because  previous-normal-element  occupies a line exclusively     as a display-block. 
+
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .border1 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+      .border2 {
+        /* float: left; */
+        height: 90px;
+        width: 110px;
+        background-color: red;
+      }
+      .border3 {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="border1">
+      pink effected red, so red rised into pink's original position.
+    </div>
+    <div class="border2"></div>
+    <div class="border3">
+      green did not effect red, green should have been on the right of pink, but
+      green can only be located below red div. so green is on the right-below of
+      pink
+    </div>
+  </body>
+</html>

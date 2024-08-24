@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_excercise2</title>
+    <style>
+      /* thought:
+      left-width:10
+      left-height: 41
+
+      right-width:  10+1
+      right-height: 20+1
+       
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+
+      .father1 {
+        height: 41px;
+        width: 54px;
+        background-color: white;
+      }
+      .border1 {
+        float: left;
+        height: 41px;
+        width: 10px;
+        background-color: purple;
+      }
+      .border2 {
+        float: left;
+        height: 41px;
+        width: 44px;
+        background-color: aqua;
+      }
+      .border2 div {
+        float: left;
+        height: 20px;
+        width: 10px;
+        background-color: pink;
+        margin-left: 1px;
+        margin-bottom: 1px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="father1">
+      <div class="border1"></div>
+      <div class="border2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+      </div>
+    </div>
+  </body>
+</html>

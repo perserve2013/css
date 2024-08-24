@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>float_why_clear_float</title>
+    <style>
+      /* thought:
+       this problem will happen because of 3 reasons:
+       1.father-div has no height,      because sometimes u do not know how much  you should set into the height  when u do not know  son-element's content.
+       2.son-div  set  float-preperty.
+       3.father-div's below-div  will rise to father-div's lower-edge   so that occured problem. 
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        width: 500px;
+        /* no height */
+        background-color: gray;
+      }
+      .main div {
+        float: left;
+        width: 40px;
+        height: 40px;
+        background-color: pink;
+      }
+      .below {
+        width: 200px;
+        height: 90px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      i have no height, so the below div will rise to my lower-edge.
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <div class="below"></div>
+  </body>
+</html>

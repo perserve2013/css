@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position09_absolute_change_display</title>
+    <style>
+      /* thought:
+      1(.absolute_span):
+         a span which is a display-inline element,  normally has no height and weight. 
+         if you set a span's position's value to fixed or absolute, you can give the span height and weight.
+      2(.fix_div):
+          a div  which is a display-block element,   normally monopolize an entire row. 
+          if you set a div's position's value to fixed or absolute, div's width is the div's content's width.
+      3(.father  .son):
+          a fixed or absolute-position  element  never happened  'margin-collapes'.  
+      */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .absolute_span {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 100px;
+        background-color: red;
+      }
+      .fix_div {
+        position: fixed;
+        background-color: blue;
+      }
+      .father {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 300px;
+        margin-top: 50px;
+        background-color: pink;
+      }
+      .son {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span class="absolute_span">i have width and height when i am a span</span>
+    <div class="fix_div">my width is content's width when i am a div</div>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

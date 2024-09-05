@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position03_absolute_fatherHasPosition</title>
+    <style>
+      /* thought:
+       1. for an absolute-position element, 
+          start from father, to grand-father, to grand_father's father, 
+          once you find who has the position attribute,  
+          this 'absolute-position element' will be positioned with who as a reference.
+       2. an absolute-position element  is removed from document-flow  and  does not occupy the space in document-flow.
+
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .grand_father {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        background-color: deeppink;
+        padding: 50px;
+      }
+      .father {
+        width: 400px;
+        height: 400px;
+        background-color: skyblue;
+        /* margin-top: 40px;            there is going to be margin-collapse*/
+      }
+      .son {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 20px;
+        bottom: 10px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grand_father">
+      <div class="father"><div class="son"></div></div>
+    </div>
+  </body>
+</html>

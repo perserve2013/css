@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position06_sticky</title>
+    <style>
+      /* thought:
+      1. sticky-position-element will be fixed by top-value  when sliding down the mouse.
+      2. sticky-position-element will ignore margin-top-value when sliding down the mouse.
+      3. sticky-position-element will occupy its original space, 
+          so static-position-div(under_sticky_box in this example) which is behind ticky-position-element will be locoated under ticky-position-element's original position. 
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 1180px;
+      }
+      .sticky_box {
+        position: sticky;
+        width: 100px;
+        height: 181px;
+        background-color: pink;
+        /* it will be fixed under browser's top with 41px. */
+        top: 41px;
+        left: 100px;
+        /* when sliding the mouse down, 49px height can be hidden because of 90-41=49  */
+        margin-top: 90px;
+      }
+      .under_sticky_box {
+        width: 20px;
+        height: 1180px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sticky_box">
+      my position-attribute is sticky. i am positioned with browser as the
+      reference.
+    </div>
+    <div class="under_sticky_box">
+      i am under sticky_box because sticky-position-element occupy its original
+      position.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position07_absolute_zindex</title>
+    <style>
+      /* thought:
+      1. elements with a large z-index attribute value
+          overshadow
+         elements with a small z-index attribute value
+      */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 1180px;
+      }
+      .box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+      .z_index1 {
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: red;
+      }
+      .z_index2 {
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+        background-color: green;
+      }
+      .z_index0 {
+        top: 50px;
+        left: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box z_index1">1</div>
+    <div class="box z_index2">2</div>
+    <div class="box z_index0">3</div>
+  </body>
+</html>

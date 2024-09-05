@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position08_absolute_in_center</title>
+    <style>
+      /* thought:
+      1. element which want to be in the center of browser   
+          need to be set
+           with top:50%   plus   margin-top:minus height/2
+                left:50%   plus   margin-left:minus width/2
+      */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        margin-top: -100px;
+        left: 50%;
+        margin-left: -100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">1</div>
+  </body>
+</html>

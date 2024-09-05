@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position14_display_none_absolute</title>
+    <style>
+      /* thought: 
+      img-label must be .tudou's son,         so that   .tudou:hover can be effective.  it can make .cover-div  display.
+      if there are only img-label and .cover-div,    img-label:hover can not  be effective  to make  .cover-div  display.
+          */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .tudou {
+        width: 500px;
+        height: 300px;
+        margin: 20px auto;
+        /* background-color: black; */
+        /* background: url(images/tudou.jpg) no-repeat;
+        background-size: 100% 100%; */
+      }
+      .tudou img{
+        width: 100%;
+        height: 100%;
+      }
+      .tudou .cover {
+        display: none;
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        margin-left: -250px;
+        /* top's default value is 20px */
+        top: 20px;
+        /* background-color: pink; */
+        background: url(images/arr2.png) no-repeat center rgba(0, 0, 0, .3);
+      }
+      /* 'hover' must be put in the father-div's style . 
+          if  'hover' is put in the brother-div's style, another div will not be triggered.*/
+      .tudou:hover .cover {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tudou">
+      <img src="images/tudou.jpg"></img>
+      <div class="cover"></div>
+    </div>
+  </body>
+</html>

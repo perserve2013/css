@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position01_relative</title>
+    <style>
+      /* thought:
+       1. relative-position-element  will occupy its original position  in document-flow, 
+            the second box which is static-position-element will be located under the relative-box's original position  in  document-flow.
+       2. relative-position-element  will be positioned with its original-position as the reference.
+       */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .relative_box {
+        position: relative;
+        left: 100px;
+        top: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      .second_static_box {
+        width: 200px;
+        height: 200px;
+        background-color: deeppink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="relative_box"></div>
+    <div class="second_static_box"></div>
+  </body>
+</html>

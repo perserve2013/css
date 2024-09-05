@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>d81_position10_absolute_cover_text</title>
+    <style>
+      /* thought:
+      1(.img_div):
+         this img is in standard-flow. 
+      2(.arrow_left_div):
+          a absolute or fixed-element rised so that it can cover img.
+          */
+      * {
+        /* first of all */
+        margin: 0;
+        padding: 0;
+      }
+      .img_div {
+        position: relative;
+        width: 520px;
+        height: 280px;
+        margin: 100px auto;
+        background: url(images/tb.jpg) no-repeat;
+      }
+      .arrow {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        top: 50%;
+        margin-top: -15px;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        line-height: 30px;
+        text-align: center;
+      }
+      .arrow_left_div {
+        left: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+      .arrow_right_div {
+        right: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      .img_div ul {
+        position: absolute;
+        bottom: 15px;
+        height: 13px;
+        width: 70px;
+        left: 50%;
+        margin-left: -35px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 7px;
+      }
+      .img_div ul li {
+        float: left;
+        list-style: none;
+        margin: 3px 3px;
+        /* position: absolute; */
+        height: 8px;
+        width: 8px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      .img_div ul .first {
+        background-color: red;
+      }
+      .img_div ul li:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img_div">
+      <a class="arrow arrow_left_div">&lt;</a>
+      <a class="arrow arrow_right_div">&gt;</a>
+      <ul class="select_red">
+        <li class="first"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
